@@ -15,9 +15,9 @@ import LoginPage from "./pages/LoginPage";
 function App() {
   return (
     <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
         Babysitter App
-    </header>
+    </header> */}
     <Navbar />
     <Routes>      
         <Route path="/" element={ <HomePage /> } />
