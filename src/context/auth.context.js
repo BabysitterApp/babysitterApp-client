@@ -6,16 +6,14 @@ const API_URL = "http://localhost:5005";
 const AuthContext = React.createContext();
 
 function AuthProviderWrapper(props) {
-
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [user, setUser] = useState(null);
 
-
   const storeToken = (token) => {
     //  <==  ADD
     localStorage.setItem("authToken", token);
-  }
+  };
   const authenticateUser = () => {
     // Get the stored token from the localStorage
     const storedToken = localStorage.getItem("authToken");
@@ -27,7 +25,7 @@ function AuthProviderWrapper(props) {
         .get(`${API_URL}/auth/verify`, {
           headers: { Authorization: `Bearer ${storedToken}` },
         })
-      
+
         .then((response) => {
           // If the server verifies that the JWT token is valid
           const user = response.data;
@@ -49,28 +47,23 @@ function AuthProviderWrapper(props) {
       setIsLoading(false);
       setUser(null);
     }
-  }
+  };
   useEffect(() => {
     authenticateUser();
   }, []);
   const removeToken = () => {
-    
     // Upon logout, remove the token from the localStorage
     localStorage.removeItem("authToken");
-  }
+  };
 
-    const logOutUser = () => {
-      removeToken();
-      authenticateUser();
-       }
-  
-    
+  const logOutUser = () => {
+    removeToken();
+    authenticateUser();
+  };
 
-
-
-//   useEffect(() => {
-//     authenticateUser();
-//   }, []);
+  //   useEffect(() => {
+  //     authenticateUser();
+  //   }, []);
 
   /* 
     Functions for handling the authentication status (isLoggedIn, isLoading, user)
@@ -85,12 +78,12 @@ function AuthProviderWrapper(props) {
         user,
         storeToken,
         authenticateUser,
-        logOutUser
+        logOutUser,
       }}
     >
       {props.children}
     </AuthContext.Provider>
-  )
+  );
 }
 
 export { AuthProviderWrapper, AuthContext };
