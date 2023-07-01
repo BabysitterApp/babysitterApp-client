@@ -68,9 +68,9 @@ function AuthProviderWrapper(props) {
 
 
 
-//   useEffect(() => {
-//     authenticateUser();
-//   }, []);
+  useEffect(() => {
+    authenticateUser();
+  }, []);
 
   /* 
     Functions for handling the authentication status (isLoggedIn, isLoading, user)
