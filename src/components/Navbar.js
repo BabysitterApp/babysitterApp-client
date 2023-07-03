@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react"; // <== IMPORT
 import { AuthContext } from "../context/auth.context";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import balloonHeart from "../Images/icon/balloon-heart.svg";
 
 function Navbar() {
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
@@ -8,11 +11,10 @@ function Navbar() {
   return (
     <nav class="navbar bg-body-tertiary">
       <div class="container">
-        
+        <a class="navbar-brand">LittleLuvSitters</a>
         <Link to="/">
           <button>Home</button>
         </Link>
-
         {isLoggedIn && (
           <>
             <Link to="/babysitterServices">
@@ -23,7 +25,6 @@ function Navbar() {
             <span>{user && user.name}</span>
           </>
         )}
-
         {!isLoggedIn && (
           <>
             <Link to="/signup">
