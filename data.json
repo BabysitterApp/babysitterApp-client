@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Laura",
+        "image":  "/images/babysitterPhotos/a.jpg"
+        },
+    {
+        "id": 2,
+        "name": "Yana",
+        "image":  "/images/babysitterPhotos/b.webp"
+    },
+    {
+        "id": 3,
+        "name": "Jessica",
+        "image": "/images/babysitterPhotos/c.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "Clara",
+        "image": "/images/babysitterPhotos/d.jpeg"
+    }
+]
