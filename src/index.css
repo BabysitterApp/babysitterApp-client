@@ -29,10 +29,10 @@ textarea {
 }
 
 nav {
-  background: #515f7d;
+  background: #3b9dc7;
   color: white;
   padding: 0px 20px;
-  box-shadow: 0px 1px 2px gray;
+  box-shadow: 0px 1px 2px rgb(130, 8, 8);
   width: 100%;
   margin-bottom: 15px;
   padding: 5px;
@@ -45,9 +45,9 @@ nav li {
   font-weight: 600;
 }
 .LoginPage {
-  background: #f9eec3;
-  border: 1px solid grey;
-  box-shadow: 0px 2px 3px grey;
+  background: #789c1d;
+  border: 1px solid rgb(228, 52, 52);
+  box-shadow: 0px 2px 3px rgb(119, 134, 88);
   width: 400px;
   text-align: center;
   margin: 0 auto;
@@ -57,11 +57,11 @@ nav li {
 }
 .SignupPage,
 .LoginPage {
-  background-color: #608dd5;
+  background-color: #60d593;
 }
 
 .LoginPage {
-  background-color: #94a7c8;
+  background-color: #6483b8;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
