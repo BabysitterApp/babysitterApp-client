@@ -44,6 +44,8 @@ nav li {
   font-size: 24px;
   font-weight: 600;
 }
+
+.SignupPage,
 .LoginPage {
   background: #789c1d;
   border: 1px solid rgb(228, 52, 52);
@@ -55,14 +57,11 @@ nav li {
   padding: 10px;
   border-radius: 4px;
 }
-.SignupPage,
-.LoginPage {
-  background-color: #60d593;
-}
 
-.LoginPage {
-  background-color: #6483b8;
-}
+
+
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
