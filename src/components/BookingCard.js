@@ -1,7 +1,7 @@
 // src/components/BookingCard.js
 
 // We are deconstructing the props object directly in the parentheses of the function
-function TaskCard({ name, aboutMe }) {
+function BookingCard({ name, aboutMe }) {
   return (
     <div className="Booking card">
       <h3>{babysitterName}</h3>
