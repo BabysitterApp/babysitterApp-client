@@ -1,6 +1,6 @@
 import './App.css';
-//import "bootstrap/dist/css/bootstrap.min.css";
-//import "bootstrap/dist/js/bootstrap.bundle.min";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 import { Routes, Route } from "react-router-dom";
 //import BabysitterListPage from "./pages/BabysitterListPage";
 import Navbar from "./components/Navbar";    
@@ -12,7 +12,7 @@ import LoginPage from "./pages/LoginPage";
 import { Container, Row, Col} from 'react-bootstrap';
 import BabysitterCard from './components/BabysitterCard';
 import BookingCard from './components/BookingCard';
-import babysitters from './data.json';
+import babysitters from '/data.json';
 
 
 
