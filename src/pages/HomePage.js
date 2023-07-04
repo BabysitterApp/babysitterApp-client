@@ -1,5 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
 import teilzeit from "../Images/babysitter/babysitter-teilzeit-662x331.jpg";
 
 function HomePage() {

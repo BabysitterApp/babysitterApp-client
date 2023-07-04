@@ -1,6 +1,5 @@
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
+
 import { Routes, Route } from "react-router-dom";
 //import BabysitterListPage from "./pages/BabysitterListPage";
 import Navbar from "./components/Navbar";
@@ -9,7 +8,6 @@ import HomePage from "./pages/HomePage";
 //import EditBabysitterPage from "./pages/EditBabysitterPage ";
 import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
-import { Container, Row, Col } from "react-bootstrap";
 import BabysitterCard from "./components/BabysitterCard";
 import BookingCard from "./components/BookingCard";
 import babysitters from "./data.json";
@@ -29,13 +27,10 @@ function App() {
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>
-      <Container>
-        <Row>
-          {babysitters}
-          <BabysitterCard />
-          <BookingCard />
-        </Row>
-      </Container>
+
+      {/* {babysitters} */}
+      <BabysitterCard />
+      <BookingCard />
     </div>
   );
 }
