@@ -8,7 +8,8 @@ import BabysitterCard from "../components/BabysitterCard";
  
  
 function BabysitterDirectoryPage() {
-  const [babysitterServices1, setbabysitterServices1] = useState([]);
+  const [babysitterServices, setBabysitterServices] = useState([]);
+  const [bookings, setBookings] = useState([]);
  
   const getAllBabysitterServices = () => {
     const storedToken = localStorage.getItem("authToken");
@@ -17,7 +18,7 @@ function BabysitterDirectoryPage() {
       .get(`${process.env.REACT_APP_SERVER_URL}/api/babysitterServices`,
       { headers: { Authorization: `Bearer ${storedToken}` } }
       )
-      .then((response) => setbabysitterServices1(response.data))
+      .then((response) => setBabysitterServices(response.data))
       .catch((error) => console.log(error));
   };
  
@@ -29,24 +30,29 @@ function BabysitterDirectoryPage() {
  
   
   return (
-    <div>
-      <AddBabysitter refreshBabysitterServicess={getAllBabysitterServices} />
+    <div className="BabysitterDirectoryPage">
+      <AddBabysitter refreshBabysitterServices={getAllBabysitterServices} />
 
-        {babysitterServices1.map((babysitterServices) => {
+        {babysitterServices.map((babysitterServices) => {
           <BabysitterCard key={babysitterServices._id} {...babysitterServices} />  
           return (
-            <div key={babysitterServices._id} >
-              <Link to={`/babysitterServices1/${babysitterServices._id}`}>
+            <div className="BabysitterCard card"key={babysitterServices._id} >
+              <Link to={`/babysitterServices/${babysitterServices._id}`}>
                 <h3>{babysitterServices.title}</h3>
               </Link>
               
 
 
-  {/* <li className="BookingCard card" key={booking._id}>
-    <h3>{title}</h3>
-    <h4>Description:</h4>
-    <p>{description}</p>
-  </li> */}
+  <li className="BookingCard card" key={bookings._id}>
+    <h3>babysitterName</h3>
+    <h4>About Me:</h4>
+    <h4>languages:</h4>
+    <h4>yearsOfExperience:</h4>
+    <h4>provideServiceFor:</h4>
+    <h4>pricePerHour:</h4>
+    <h4>supportServices:</h4>
+    <p>aboutMe</p>
+  </li>
 
 
             </div>
