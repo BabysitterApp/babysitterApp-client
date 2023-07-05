@@ -1,5 +1,3 @@
-// src/components/BookingCard.js
-
 // We are deconstructing the props object directly in the parentheses of the function
 function BookingCard({ name, aboutMe }) {
 

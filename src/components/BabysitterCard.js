@@ -1,11 +1,9 @@
-// src/components/BabysitterCard.js
-
 import { Link } from "react-router-dom";
 
 // We are deconstructing props object directly in the parentheses of the function
 function BabysitterCard({ title, description, _id }) {
 
-  return  <h1> this BabysitterCard  </h1>
+  return  <h1>  BabysitterCard  </h1>
 
   // return (
   //   <div className="BabysitterCard card">

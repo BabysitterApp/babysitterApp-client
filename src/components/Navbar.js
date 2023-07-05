@@ -10,6 +10,7 @@ function Navbar() {
   return (
     <nav class="navbar bg-body-tertiary">
       <div class="container">
+        <img href ="balloon-heart.svg" />
         <a class="navbar-brand">LittleLuvSitters</a>
         <Link to="/">
           <button>Home</button>
