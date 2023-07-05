@@ -47,15 +47,15 @@ nav li {
 
 .SignupPage,
 .LoginPage {
-  background: #789c1d;
-  border: 1px solid rgb(228, 52, 52);
+  background: rgb(226, 204, 231);
+  border: 1px solid rgb(197, 58, 58);
   box-shadow: 0px 2px 3px rgb(119, 134, 88);
-  width: 400px;
+  width: 500px;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 10px;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 
 

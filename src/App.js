@@ -22,16 +22,21 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         {/* <Route path="/babysitterServices/:babysitterServicesId" element={ <BabysitterDetailsPage /> } /> */}
-        <Route path="/babysitterServices" element={ <BabysitterDirectoryPage /> } />
-        <Route path="/babysitterServices/edit/:babysitterServicesId" element={ <EditBabysitterPage /> } />
+        <Route
+          path="/babysitterServices"
+          element={<BabysitterDirectoryPage />}
+        />
+        <Route
+          path="/babysitterServices/edit/:babysitterServicesId"
+          element={<EditBabysitterPage />}
+        />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />
-       
       </Routes>
 
       {/* {babysitters} */}
- 
-     {/* <BabysitterCard />
+
+      {/* <BabysitterCard />
       <BookingCard /> */}
     </div>
   );
