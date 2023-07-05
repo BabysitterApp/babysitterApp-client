@@ -1,47 +1,60 @@
-import { Link } from "react-router-dom";
-import { useContext } from "react"; // <== IMPORT
+import { NavLink, Link } from "react-router-dom";
+import { useContext } from "react";
 import { AuthContext } from "../context/auth.context";
-
+import {
+  Navbar as BootstrapNavbar,
+  Nav as BootstrapNav,
+  Button,
+  Container,
+  Image,
+  Row,
+} from "react-bootstrap";
 import icon1 from "../Images/icon/icon1.png";
 
 function Navbar() {
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
   return (
-    <nav class="navbar bg-body-tertiary">
-      <div class="container">
-      <img src={icon1} alt="icon" width ="6%" height = "6%" />
-        <a class="navbar-brand">LittleLuvSitters</a>
-        <Link to="/">
-          <button>Home</button>
-        </Link>
-        {isLoggedIn && (
-          <>
-            <Link to="/babysitterServices">
-              <button>Babysitters </button>
-            </Link>
-            <Link to="/">
-            <button onClick={logOutUser}>Logout</button>
-            </Link>
-
-            
-            <span>{user && user.name}</span>
-          </>
-        )}
-        {!isLoggedIn && (
-          <>
-            <Link to="/signup">
-              {" "}
-              <button>Sign Up</button>{" "}
-            </Link>
-            <Link to="/login">
-              {" "}
-              <button>Login</button>{" "}
-            </Link>
-          </>
-        )}
-      </div>
-    </nav>
+    <BootstrapNavbar
+      bg="light"
+      variant="light"
+      className="justify-content-evenly"
+      expand="lg"
+    >
+      <Container>
+        <BootstrapNavbar.Brand as={Link} to="/">
+          <Image src={icon1} alt="icon" width="6%" height="6%" />
+          LittleLuvSitters
+        </BootstrapNavbar.Brand>
+        <BootstrapNav>
+          {/* <NavLink to="/" activeClassName="active">
+            Home
+          </NavLink> */}
+          {isLoggedIn && (
+            <>
+              <NavLink to="/babysitterServices" activeClassName="active">
+                Babysitters
+              </NavLink>
+              <NavLink to="/" onClick={logOutUser}>
+                Logout
+              </NavLink>
+              <span>{user && user.name}</span>
+            </>
+          )}
+          {!isLoggedIn && (
+            <BootstrapNav>
+              <NavLink to="/signup" activeClassName="active">
+                <Button>Register</Button>
+              </NavLink>{" "}
+              {"  "}
+              <NavLink to="/login" activeClassName="active">
+                <Button>Login</Button>
+              </NavLink>
+            </BootstrapNav>
+          )}
+        </BootstrapNav>
+      </Container>
+    </BootstrapNavbar>
   );
 }
 
