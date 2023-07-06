@@ -1,16 +1,22 @@
 import { Link } from "react-router-dom";
 
 // We are deconstructing props object directly in the parentheses of the function
-function BabysitterCard({ babysitterName, aboutMe,supportServices,yearsOfExperience,languages, pricePerHour,description,_id }) {
-
- // return  <h1>  BabysitterCard  </h1>
+function BabysitterCard({
+  babysitterName,
+  aboutMe,
+  supportServices,
+  yearsOfExperience,
+  languages,
+  pricePerHour,
+  description,
+  _id,
+}) {
+  // return  <h1>  BabysitterCard  </h1>
 
   return (
     <div className="BabysitterCard card">
       <Link to={`/babysitterServices/${_id}`}>
         <h3>{babysitterName}</h3>
-        <h4>A little about me:</h4>
-        <p>{aboutMe}</p>
         <h4>What services I can provide:</h4>
         <p>{supportServices}</p>
         <h4>Years of Experience:</h4>
@@ -20,7 +26,7 @@ function BabysitterCard({ babysitterName, aboutMe,supportServices,yearsOfExperie
         <h4>Price per Hour:</h4>
         <p>{pricePerHour}</p>
       </Link>
-      <p style={{ maxWidth: "400px" }}>{description} </p>
+      <p style={{ maxWidth: "400px" }}>{aboutMe} </p>
     </div>
   );
 }
