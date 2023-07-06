@@ -39,12 +39,6 @@ function BabysitterDirectoryPage() {
               key={babysitterServices._id}
               {...babysitterServices}
             />
-<<<<<<< HEAD
-=======
-            {/* <Link to={`/babysitterServices/${babysitterServices._id}`}>
-              <h3>{babysitterServices.babysitterName}</h3>
-            </Link> */}
->>>>>>> e1dbbb799d353b827cf5fee001a899a8297d5977
 
             {/* <Link to={`/babysitterServices/${babysitterServices._id}`}>
 
