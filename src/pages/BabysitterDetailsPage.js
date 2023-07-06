@@ -28,7 +28,7 @@ function BabysitterDetailsPage(props) {
 
   useEffect(() => {
     getBabysitterService();
-  });
+  },[babysitterServicesId]);
   console.log(babysitterService);
   return (
     <div className="BabysitterDetails">
@@ -62,6 +62,9 @@ function BabysitterDetailsPage(props) {
 
       <Link to={`/babysitterServices/edit/${babysitterServicesId}`}>
         <button>Edit Babysitter</button>
+      </Link>
+      <Link to={`/babysitterServices/book/${babysitterServicesId}`}>
+        <button>Book Now</button>
       </Link>
     </div>
   );

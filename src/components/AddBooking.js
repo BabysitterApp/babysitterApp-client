@@ -1,4 +1,5 @@
-import { useState } from "react";
+import {useEffect, useState } from "react";
+import { useParams} from "react-router-dom";
 import axios from "axios";
 
 //const API_URL = "http://localhost:5005";
@@ -10,7 +11,8 @@ function AddBooking(props) {
   const [durationOfServices, setDurationOfService] = useState("");
   const [pricePerHour, setPricePerHour] = useState("");
   
-  
+  const [babysitterService, setBabysitterService] = useState(null);
+  const { babysitterServicesId } = useParams();
 
   
   const handleSubmit = (e) => {
@@ -19,11 +21,11 @@ function AddBooking(props) {
     // We need the babysitter id when creating the new task
     const { bookingId } = props;
     // Create an object representing the body of the POST request
-    const requestBody =  {babysitterName, dateOfServices,durationOfServices,pricePerHour,bookingId };
+    const requestBody =  {babysitterServicesId,dateOfServices,durationOfServices,pricePerHour};
   // Get the token from the localStorage
   const storedToken = localStorage.getItem('authToken');
     axios
-      .post(`${process.env.REACT_APP_SERVER_URL}/api/bookings`, requestBody,
+      .post(`${process.env.REACT_APP_SERVER_URL}/api/babysitterServices/booking`, requestBody,
       { headers: { Authorization: `Bearer ${storedToken}` } } 
       )
       .then((response) => {
@@ -35,47 +37,65 @@ function AddBooking(props) {
       
         // Invoke the callback function coming through the props
         // from the BabysitterDetailsPage, to refresh the babysitter details
-        props.refreshBabysitterService();
+       
+      })
+      .catch((error) => console.log(error));
+  };
+  const getBabysitterService = () => {
+    const storedToken = localStorage.getItem("authToken");
+    axios
+      .get(
+        `${process.env.REACT_APP_SERVER_URL}/api/babysitterServices/${babysitterServicesId}`,
+        { headers: { Authorization: `Bearer ${storedToken}` } }
+      )
+
+      .then((response) => {
+        console.log(response.data);
+        const oneBabysitterService = response.data;
+        setBabysitterService(oneBabysitterService);
       })
       .catch((error) => console.log(error));
   };
 
+  useEffect(() => {
+    getBabysitterService();
+  },[babysitterServicesId]);
+  console.log(babysitterService);
   
   return (
+
     <div className="AddBooking">
       <h3>Add New Booking</h3>
-      
+     
       <form onSubmit={handleSubmit}>
-        <label>Babysitter Name:</label>
-        <input
-          type="text"
-          name="babysitterName"
-          value={babysitterName}
-          onChange={(e) => setBabysitterName(e.target.value)}
-        />
-
+      {babysitterService && (
+      <> 
+        <p>Babysitter Name:</p>
+        <h1>{babysitterService.babysitterName}</h1>
         <label>Date Of Service:</label>
-        <textarea
+        <input
           type="Date"
           name="dateOfServices"
           value={dateOfServices}
           onChange={(e) =>  setDateOfService(e.target.value)}
         />
 <label>Duration Of Service:</label>
-        <textarea
+        <input
           type="Number"
-          name="dateOfService"
+          name="durationOfService"
           value={durationOfServices}
           onChange={(e) =>  setDurationOfService(e.target.value)}
         />
         <label>Price per Hour:</label>
-        <textarea
+        <input
           type="Number"
           name="pricePerHour"
           value={pricePerHour}
           onChange={(e) =>  setPricePerHour(e.target.value)}
         />
         <button type="submit">Add Booking</button>
+        </> 
+      )}
       </form>
     </div>
   );

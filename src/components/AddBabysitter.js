@@ -85,14 +85,14 @@ function AddBabysitter(props) {
           onChange={(e) => setProvideServiceFor(e.target.value)}
         />
            <label>Price per Hour:</label>
-        <textarea
+        <input
           type="Number"
           name="pricePerHour"
           value={pricePerHour}
           onChange={(e) => setPricePerHour(e.target.value)}
         />
              <label>Support Services:</label>
-        <textarea
+        <select
           type="Stringr"
           name="supportServices"
           value={supportServices}

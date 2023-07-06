@@ -9,6 +9,7 @@ import BabysitterDetailsPage from "./pages/BabysitterDetailsPage";
 import EditBabysitterPage from "./pages/EditBabysitterPage";
 import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
+import AddBooking from "./components/AddBooking";
 
 //import babysitters from "./data.json";
 
@@ -27,6 +28,10 @@ function App() {
         <Route
           path="/babysitterServices/edit/:babysitterServicesId"
           element={<EditBabysitterPage />}
+        />
+         <Route
+          path="/babysitterServices/book/:babysitterServicesId"
+          element={<AddBooking />}
         />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />

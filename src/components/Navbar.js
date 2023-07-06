@@ -33,7 +33,7 @@ function Navbar() {
           {isLoggedIn && (
             <>
               <NavLink to="/babysitterServices" activeClassName="active">
-                Babysitters
+               <Button>Babysitters</Button> 
               </NavLink>
               <NavLink to="/" onClick={logOutUser}>
                 <Button>Logout</Button>
