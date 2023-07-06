@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
-import AddBooking from "../components/AddBooking";
-import BookingCard from "../components/BookingCard";
+// import AddBooking from "../components/AddBooking";
+// import BookingCard from "../components/BookingCard";
 
 //const API_URL = "http://localhost:5005";
 
@@ -28,7 +28,7 @@ function BabysitterDetailsPage(props) {
 
   useEffect(() => {
     getBabysitterService();
-  },[babysitterServicesId]);
+  }, [babysitterServicesId]);
   console.log(babysitterService);
   return (
     <div className="BabysitterDetails">

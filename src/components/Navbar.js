@@ -7,7 +7,6 @@ import {
   Button,
   Container,
   Image,
-  Row,
 } from "react-bootstrap";
 import icon1 from "../Images/icon/icon1.png";
 
@@ -23,8 +22,8 @@ function Navbar() {
     >
       <Container>
         <BootstrapNavbar.Brand as={Link} to="/">
-          <Image src={icon1} alt="icon" width="6%" height="6%" />
-          LittleLuvSitters
+          <Image src={icon1} alt="icon" width="20%" height="20%" />
+          <em>LittleLuvSitters</em>
         </BootstrapNavbar.Brand>
         <BootstrapNav>
           {/* <NavLink to="/" activeClassName="active">
@@ -33,7 +32,7 @@ function Navbar() {
           {isLoggedIn && (
             <>
               <NavLink to="/babysitterServices" activeClassName="active">
-               <Button>Babysitters</Button> 
+                <Button>Babysitters</Button>
               </NavLink>
               <NavLink to="/" onClick={logOutUser}>
                 <Button>Logout</Button>

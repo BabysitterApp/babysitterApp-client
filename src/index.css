@@ -2,6 +2,10 @@ body {
   margin: 0;
 }
 
+.active {
+  color: red;
+  font-weight: bold;
+}
 
 .format {
   display: flex;
@@ -52,25 +56,17 @@ nav li {
   font-size: 24px;
   font-weight: 600;
 }
+
 .HomePage
 {
   background: rgb(239, 214, 90);
 }
-.SignupPage
-{
-    background: rgb(247, 244, 244);
-    border: 1px solid rgb(197, 58, 58);
-    box-shadow: 0px 2px 3px rgb(119, 134, 88);
-    width: 500px;
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    padding: 10px;
-    border-radius: 10px;
-  }
 
+
+
+.SignUpPage,
 .LoginPage {
-  background: rgb(224, 202, 229);
+  background: rgb(250, 246, 246);
   border: 1px solid rgb(197, 58, 58);
   box-shadow: 0px 2px 3px rgb(119, 134, 88);
   width: 500px;
@@ -78,7 +74,7 @@ nav li {
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 
@@ -87,9 +83,23 @@ code {
     monospace;
 }
 
-footer {
-  background-color: rgb(17, 16, 16);
-  color: rgb(180, 180, 180);
-  height: 200px;
-  padding: 20px;
+
+.page-container {
+  min-height: 100vh;
+  /* Make the container at least the height of the viewport */
+  display: flex;
+  flex-direction: column;
 }
+
+.page-content {
+  flex: 1;
+  /* Allow the content to grow and take up remaining space */
+}
+
+.footer {
+  background-color: rgb(246, 242, 242);
+  padding: 20px;
+  margin-top: auto;
+  /* Push the footer to the bottom */
+}
+

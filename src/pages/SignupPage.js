@@ -1,9 +1,7 @@
-// src/pages/SignupPage.js
-
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-
+import { Button, Form } from "react-bootstrap";
 
 function SignupPage(props) {
   const [email, setEmail] = useState("");
@@ -25,10 +23,8 @@ function SignupPage(props) {
     // Make an axios request to the API
     // If the POST request is a successful redirect to the login page
     // If the request resolves with an error, set the error message in the state
-    axios.post(
-        `${process.env.REACT_APP_SERVER_URL}/auth/signup`, 
-        requestBody
-    )
+    axios
+      .post(`${process.env.REACT_APP_SERVER_URL}/auth/signup`, requestBody)
       .then((response) => {
         navigate("/login");
       })
@@ -39,31 +35,50 @@ function SignupPage(props) {
   };
 
   return (
-    <div className="SignupPage">
-      <h1>Sign Up</h1>
+    <div className="SignUpPage">
+      <h2>Register Your Account</h2>
 
-      <form onSubmit={handleSignupSubmit}>
-        <label>Email:</label>
-        <input type="email" name="email" value={email} onChange={handleEmail} />
+      <Form onSubmit={handleSignupSubmit}>
+        <Form.Group controlId="formInput">
+          <Form.Label>Email Address</Form.Label>
+          <Form.Control
+            type="email"
+            name="email"
+            value={email}
+            placeholder="name@example.com"
+            onChange={handleEmail}
+          />
 
-        <label>Password:</label>
-        <input
-          type="password"
-          name="password"
-          value={password}
-          onChange={handlePassword}
-        />
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            type="password"
+            name="password"
+            value={password}
+            placeholder="Password"
+            onChange={handlePassword}
+          />
 
-        <label>Name:</label>
-        <input type="text" name="name" value={name} onChange={handleName} />
+          <Form.Label>Name:</Form.Label>
+          <Form.Control
+            type="text"
+            name="name"
+            value={name}
+            placeholder="Your Name"
+            onChange={handleName}
+          />
+        </Form.Group>
 
-        <button type="submit">Sign Up</button>
-      </form>
+        <Button block type="submit" size="lg">
+          Sign-up
+        </Button>
+      </Form>
 
       {errorMessage && <p className="error-message">{errorMessage}</p>}
 
       <p>Already have account?</p>
-      <Link to={"/login"}> Login</Link>
+      <Button variant="secondary" as={Link} to="/login">
+        Login
+      </Button>
     </div>
   );
 }

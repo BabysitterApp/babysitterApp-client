@@ -1,8 +1,8 @@
-import AddBabysitter from "../components/AddBabysitter";
-import {Button} from "react-bootstrap";
+// import AddBabysitter from "../components/AddBabysitter";
+import { Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import {useParams, Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import BabysitterCard from "../components/BabysitterCard";
 
 //const REACT_APP_SERVER_URL = "http://localhost:5005";
@@ -11,7 +11,7 @@ function BabysitterDirectoryPage() {
   const [babysitterServices, setBabysitterServices] = useState([]);
   const { babysitterServicesId } = useParams();
 
-  const [bookings, setBookings] = useState([]);
+  // const [bookings, setBookings] = useState([]);
 
   const getAllBabysitterServices = () => {
     const storedToken = localStorage.getItem("authToken");
@@ -35,7 +35,7 @@ function BabysitterDirectoryPage() {
       {/* <AddBabysitter refreshBabysitterServices={getAllBabysitterServices} /> */}
       <h1>Babysitter Directory</h1>
       <Link to={`/babysitterServices/add/${babysitterServicesId}`}>
-        <Button>Add Me as Babysitter</Button>
+        <Button>Add Me as a Babysitter</Button>
       </Link>
       {babysitterServices.map((babysitterServices) => {
         return (
@@ -44,7 +44,6 @@ function BabysitterDirectoryPage() {
               key={babysitterServices._id}
               {...babysitterServices}
             />
-      
 
             {/* <Link to={`/babysitterServices/${babysitterServices._id}`}>
 
@@ -60,9 +59,7 @@ function BabysitterDirectoryPage() {
               <p>aboutMe</p>
             </li> */}
           </div>
-       
         );
-     
       })}
     </div>
   );

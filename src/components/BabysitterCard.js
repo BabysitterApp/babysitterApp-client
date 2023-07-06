@@ -16,16 +16,16 @@ function BabysitterCard({
     <div className="BabysitterCard card">
       <Link to={`/babysitterServices/${_id}`}>
         <h3>{babysitterName}</h3>
-        <h4>What services I can provide:</h4>
+        <span>What services I can provide:</span>
         <p>{supportServices}</p>
-        <h4>Years of Experience:</h4>
+        <span>Years of Experience:</span>
         <p>{yearsOfExperience}</p>
         <h4>Languages:</h4>
         <p>{languages}</p>
         <h4>Price per Hour:</h4>
         <p>{pricePerHour}</p>
+        <p>Know something about me: {aboutMe} </p>
       </Link>
-      <p style={{ maxWidth: "400px" }}>{aboutMe} </p>
     </div>
   );
 }

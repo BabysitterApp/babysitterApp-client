@@ -3,9 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
 
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import FloatingLabel from "react-bootstrap/FloatingLabel";
+import { Button, Form } from "react-bootstrap";
 
 function LoginPage(props) {
   const [email, setEmail] = useState("");
@@ -42,43 +40,29 @@ function LoginPage(props) {
 
   return (
     <div className="LoginPage">
-      <h2>Log into your account</h2>
+      <h2>Log into Your Account</h2>
 
       <Form onSubmit={handleLoginSubmit}>
-        <FloatingLabel
-          controlId="floatingInput"
-          label="Email address"
-          className="mb-3"
-        >
+        <Form.Group controlId="formInput">
+          <Form.Label>Email Address</Form.Label>
           <Form.Control
             type="email"
+            name="email"
             placeholder="name@example.com"
             value={email}
             onChange={handleEmail}
           />
-        </FloatingLabel>
-        <FloatingLabel controlId="floatingPassword" label="Password">
+          <Form.Label>Password</Form.Label>
           <Form.Control
             type="password"
+            name="password"
             placeholder="Password"
             value={password}
             onChange={handlePassword}
           />
-        </FloatingLabel>
-
-        {/* <label>Email:</label>
-        <input type="email" name="email" value={email} onChange={handleEmail} />
-
-        <label>Password:</label>
-        <input
-          type="password"
-          name="password"
-        
-        /> */}
-
+        </Form.Group>
         <Button
           variant="primary"
-          // style={{ backgroundColor: "pink", color: "white" }}
           size="lg"
           type="submit"
           block
@@ -89,10 +73,10 @@ function LoginPage(props) {
         </Button>
 
         {errorMessage && <p className="error-message">{errorMessage}</p>}
+
         <p>Don't have an account yet?</p>
-        <Button variant="secondary" text="muted" Link to={"/signup"}>
-          {" "}
-          Sign Up
+        <Button variant="secondary" as={Link} to="/signup">
+          Sign-up
         </Button>
       </Form>
     </div>
