@@ -3,14 +3,11 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
 
-import {
-  Container,
-  Row,
-  Col,
-  FloatingLabel,
-  Form,
-  Button,
-} from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import FloatingLabel from "react-bootstrap/FloatingLabel";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 
 function LoginPage(props) {
   const [email, setEmail] = useState("");
@@ -48,30 +45,27 @@ function LoginPage(props) {
   return (
     <div className="LoginPage">
       <h2>Log into your account</h2>
-      <Container>
-        <Row>
-          <Col xs={12}>
-            <Form onSubmit={handleLoginSubmit}>
-              <FloatingLabel
-                controlId="floatingInput"
-                label="Email address"
-                className="mb-3"
-              >
-                <Form.Control type="email" placeholder="name@example.com" />
-              </FloatingLabel>
-              <FloatingLabel controlId="floatingPassword" label="Password">
-                <Form.Control type="password" placeholder="Password" />
-              </FloatingLabel>
 
-              {/* <label>Email:</label>
+      <Form onSubmit={handleLoginSubmit}>
+        <FloatingLabel
+          controlId="floatingInput"
+          label="Email address"
+          className="mb-3"
+        >
+          <Form.Control type="email" placeholder="name@example.com" />
+        </FloatingLabel>
+        <FloatingLabel controlId="floatingPassword" label="Password">
+          <Form.Control type="password" placeholder="Password" />
+        </FloatingLabel>
+
+        {/* <label>Email:</label>
         <input type="email" name="email" value={email} onChange={handleEmail} />
 
         <label>Password:</label>
         <input
           type="password"
           name="password"
-          value={password}
-          onChange={handlePassword}
+        
         /> */}
 
               <Button
