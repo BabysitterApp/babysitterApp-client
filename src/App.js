@@ -10,6 +10,7 @@ import EditBabysitterPage from "./pages/EditBabysitterPage";
 import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
 import AddBooking from "./components/AddBooking";
+import AddBabysitter from "./components/AddBabysitter";
 
 //import babysitters from "./data.json";
 
@@ -24,6 +25,10 @@ function App() {
         <Route
           path="/babysitterServices"
           element={<BabysitterDirectoryPage />}
+        />
+         <Route
+          path="/babysitterServices/add/:babysitterServicesId"
+          element={<AddBabysitter />}
         />
         <Route
           path="/babysitterServices/edit/:babysitterServicesId"

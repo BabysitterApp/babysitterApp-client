@@ -1,5 +1,8 @@
-import { useState } from "react";
+import { useEffect,useState } from "react";
+import { Link, useParams} from "react-router-dom";
 import axios from "axios";
+import {Button} from "react-bootstrap";
+
 
 //const API_URL = "http://localhost:5005";
 
@@ -12,7 +15,8 @@ function AddBabysitter(props) {
   const [pricePerHour, setPricePerHour] = useState("");
   const [supportServices, setSupportServices] = useState("");
 
-
+  const [babysitterService, setBabysitterService] = useState(null);
+  const { babysitterServicesId } = useParams();
   const handleSubmit = (e) => {
     e.preventDefault();
     const { babysitterServiceId } = props;
@@ -22,7 +26,7 @@ function AddBabysitter(props) {
     // axios.post(url, data, config)
     axios
       .post(
-        `${process.env.REACT_APP_SERVER_URL}/api/babysitterServices`, 
+        `${process.env.REACT_APP_SERVER_URL}/api/babysitterServices/add`, 
         requestBody,
         { headers: { Authorization: `Bearer ${storedToken}` } }
       )
@@ -36,12 +40,29 @@ function AddBabysitter(props) {
         setPricePerHour("");
         setSupportServices("");
 
+      })
+      .catch((error) => console.log(error));
+  };
+  const getBabysitterService = () => {
+    const storedToken = localStorage.getItem("authToken");
+    axios
+      .get(
+        `${process.env.REACT_APP_SERVER_URL}/api/babysitterServices/${babysitterServicesId}`,
+        { headers: { Authorization: `Bearer ${storedToken}` } }
+      )
 
-        props.refreshBabysitterServices();
+      .then((response) => {
+        console.log(response.data);
+        const oneBabysitterService = response.data;
+        setBabysitterService(oneBabysitterService);
       })
       .catch((error) => console.log(error));
   };
 
+  useEffect(() => {
+    getBabysitterService();
+  });
+  console.log(babysitterService);
 
   return (
     <div className="AddBabysitter">
@@ -57,28 +78,28 @@ function AddBabysitter(props) {
         />
 
         <label>About Me:</label>
-        <textarea
+        <input
           type="String"
           name="aboutMe"
           value={aboutMe}
           onChange={(e) => setAboutMe(e.target.value)}
         />
    <label>Languages:</label>
-        <textarea
+        <input
           type="String"
           name="languages"
           value={languages}
           onChange={(e) => setLanguages(e.target.value)}
         />
            <label>Year Of Experience:</label>
-        <textarea
+        <input
           type="Number"
           name=" yearsOfExperience"
           value={yearsOfExperience}
           onChange={(e) => setYearsOfExperience(e.target.value)}
         />
            <label>Provide Services For:</label>
-        <textarea
+        <input
           type="String"
           name="provideServiceFor"
           value={provideServiceFor}
@@ -92,13 +113,17 @@ function AddBabysitter(props) {
           onChange={(e) => setPricePerHour(e.target.value)}
         />
              <label>Support Services:</label>
-        <select
+        <input
           type="Stringr"
           name="supportServices"
           value={supportServices}
           onChange={(e) => setSupportServices(e.target.value)}
         />
-        <button type="submit">Submit</button>
+       <br />
+       
+        <Link to="/babysitterServices" activeClassName="active">
+        <Button type="submit">Submit</Button>
+              </Link>
       </form>
     </div>
   );
