@@ -19,6 +19,7 @@ function BabysitterDetailsPage(props) {
       )
 
       .then((response) => {
+        console.log(response.data);
         const oneBabysitterService = response.data;
         setBabysitterService(oneBabysitterService);
       })
@@ -44,15 +45,16 @@ function BabysitterDetailsPage(props) {
         </>
       )}
 
-      <AddBooking
+      {/* <AddBooking
         refreshBabysitterService={getBabysitterService}
         babysitterServiceId={babysitterServicesId}
-      />
+      /> */}
 
-      {babysitterService &&
+      {/* {babysitterService &&
         babysitterService.bookings.map((booking) => (
           <BookingCard key={booking._id} {...booking} />
         ))}
+         */}
 
       <Link to="/babysitterServices">
         <button>Back to Babysitters</button>
