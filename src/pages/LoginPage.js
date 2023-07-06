@@ -50,12 +50,20 @@ function LoginPage(props) {
           label="Email address"
           className="mb-3"
         >
-          <Form.Control type="email" placeholder="name@example.com"  value={email} onChange={handleEmail}/>
+          <Form.Control
+            type="email"
+            placeholder="name@example.com"
+            value={email}
+            onChange={handleEmail}
+          />
         </FloatingLabel>
         <FloatingLabel controlId="floatingPassword" label="Password">
-          <Form.Control type="password" placeholder="Password" value={password}
-          onChange={handlePassword}
- />
+          <Form.Control
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={handlePassword}
+          />
         </FloatingLabel>
 
         {/* <label>Email:</label>
@@ -80,22 +88,12 @@ function LoginPage(props) {
 
         {errorMessage && <p className="error-message">{errorMessage}</p>}
 
-<<<<<<< HEAD
-              <p>Don't have an account yet?</p>
-              <Button variant="secondary" text="muted" Link to={"/signup"}>
-                {" "}
-                Sign Up
-              </Button>
-            </Form>
-
-=======
         <p>Don't have an account yet?</p>
         <Button variant="secondary" text="muted" Link to={"/signup"}>
           {" "}
           Sign Up
         </Button>
       </Form>
->>>>>>> ef2405caa2e69d6c660c7ba15afb874b28bc4da0
     </div>
   );
 }

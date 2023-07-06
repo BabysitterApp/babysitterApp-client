@@ -27,19 +27,22 @@ function BabysitterDirectoryPage() {
   useEffect(() => {
     getAllBabysitterServices();
   }, []);
-
+  console.log(babysitterServices);
   return (
     <div className="BabysitterDirectoryPage">
       {/* <AddBabysitter refreshBabysitterServices={getAllBabysitterServices} /> */}
       <h1>Babysitter Directory</h1>
       {babysitterServices.map((babysitterServices) => {
-        <BabysitterCard key={babysitterServices._id} {...babysitterServices} />;
         return (
           <div className="BabysitterCard card" key={babysitterServices._id}>
-            <Link to={`/babysitterServices/${babysitterServices._id}`}>
-              <h3>{babysitterServices.name}</h3>
-            </Link>
+            <BabysitterCard
+              key={babysitterServices._id}
+              {...babysitterServices}
+            />
 
+            {/* <Link to={`/babysitterServices/${babysitterServices._id}`}>
+            
+            </Link> */}
             {/* <li className="BookingCard card" key={bookings._id}>
               <h3>babysitterName</h3>
               <h4>About Me:</h4>

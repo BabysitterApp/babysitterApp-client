@@ -18,7 +18,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="/babysitterServices/:babysitterServicesId" element={ <BabysitterDetailsPage /> } /> */}
+        <Route
+          path="/babysitterServices/:babysitterServicesId"
+          element={<BabysitterDetailsPage />}
+        />
         <Route
           path="/babysitterServices"
           element={<BabysitterDirectoryPage />}
