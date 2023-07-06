@@ -6,7 +6,6 @@ import { AuthContext } from "../context/auth.context";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
-import Container from "react-bootstrap/Container";
 
 function LoginPage(props) {
   const [email, setEmail] = useState("");
@@ -67,25 +66,24 @@ function LoginPage(props) {
         
         /> */}
 
-              <Button
-                variant="primary"
-                // style={{ backgroundColor: "pink", color: "white" }}
-                size="lg"
-                type="submit"
-                block
-              >
-                Login
-              </Button>
+        <Button
+          variant="primary"
+          // style={{ backgroundColor: "pink", color: "white" }}
+          size="lg"
+          type="submit"
+          block
+        >
+          Login
+        </Button>
 
-              {errorMessage && <p className="error-message">{errorMessage}</p>}
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
 
-              <p>Don't have an account yet?</p>
-              <Button variant="secondary" text="muted" Link to={"/signup"}>
-                {" "}
-                Sign Up
-              </Button>
-            </Form>
-      </Container>
+        <p>Don't have an account yet?</p>
+        <Button variant="secondary" text="muted" Link to={"/signup"}>
+          {" "}
+          Sign Up
+        </Button>
+      </Form>
     </div>
   );
 }
