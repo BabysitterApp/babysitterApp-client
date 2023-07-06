@@ -36,7 +36,7 @@ function Navbar() {
                 Babysitters
               </NavLink>
               <NavLink to="/" onClick={logOutUser}>
-                Logout
+                <Button>Logout</Button>
               </NavLink>
               <span>{user && user.name}</span>
             </>
