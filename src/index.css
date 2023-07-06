@@ -2,6 +2,14 @@ body {
   margin: 0;
 }
 
+
+.format {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 a {
   list-style: none;
   color: black;
@@ -29,7 +37,7 @@ textarea {
 }
 
 nav {
-  background: #3b9dc7;
+  background: #4ea2c7;
   color: white;
   padding: 0px 20px;
   box-shadow: 0px 1px 2px rgb(130, 8, 8);
@@ -45,9 +53,21 @@ nav li {
   font-weight: 600;
 }
 
-.SignupPage,
+.SignupPage
+{
+    background: rgb(247, 244, 244);
+    border: 1px solid rgb(197, 58, 58);
+    box-shadow: 0px 2px 3px rgb(119, 134, 88);
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
 .LoginPage {
-  background: rgb(226, 204, 231);
+  background: rgb(224, 202, 229);
   border: 1px solid rgb(197, 58, 58);
   box-shadow: 0px 2px 3px rgb(119, 134, 88);
   width: 500px;
@@ -59,10 +79,14 @@ nav li {
 }
 
 
-
-
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+footer {
+  background-color: black;
+  color: rgb(180, 180, 180);
+  height: 200px;
+  padding: 20px;
 }

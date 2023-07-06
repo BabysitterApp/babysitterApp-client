@@ -6,8 +6,8 @@ import { AuthContext } from "../context/auth.context";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
-//import Container from "react-bootstrap/Container";
-//import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 
 function LoginPage(props) {
   const [email, setEmail] = useState("");
@@ -52,17 +52,14 @@ function LoginPage(props) {
           label="Email address"
           className="mb-3"
         >
-          <Form.Control type="email" placeholder="name@example.com"  value={email} onChange={handleEmail}/>
+          <Form.Control type="email" placeholder="name@example.com" />
         </FloatingLabel>
         <FloatingLabel controlId="floatingPassword" label="Password">
-          <Form.Control type="password" placeholder="Password"   
-          value={password}
-          onChange={handlePassword} />
+          <Form.Control type="password" placeholder="Password" />
         </FloatingLabel>
 
         {/* <label>Email:</label>
-        <input type="email" 
-        name="email" />
+        <input type="email" name="email" value={email} onChange={handleEmail} />
 
         <label>Password:</label>
         <input
@@ -71,23 +68,27 @@ function LoginPage(props) {
         
         /> */}
 
-        <Button
-          variant="primary"
-          // style={{ backgroundColor: "pink", color: "white" }}
-          size="lg"
-          type="submit"
-        >
-          Login
-        </Button>
+              <Button
+                variant="primary"
+                // style={{ backgroundColor: "pink", color: "white" }}
+                size="lg"
+                type="submit"
+                block
+              >
+                Login
+              </Button>
 
-        {errorMessage && <p className="error-message">{errorMessage}</p>}
+              {errorMessage && <p className="error-message">{errorMessage}</p>}
 
-        <p>Don't have an account yet?</p>
-        <Button variant="secondary" text="muted" Link to={"/signup"}>
-          {" "}
-          Sign Up
-        </Button>
-      </Form>
+              <p>Don't have an account yet?</p>
+              <Button variant="secondary" text="muted" Link to={"/signup"}>
+                {" "}
+                Sign Up
+              </Button>
+            </Form>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
