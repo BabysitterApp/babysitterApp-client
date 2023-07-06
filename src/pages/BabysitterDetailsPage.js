@@ -8,13 +8,13 @@ import BookingCard from "../components/BookingCard";
 
 function BabysitterDetailsPage(props) {
   const [babysitterService, setBabysitterService] = useState(null);
-  const { babysitterServicessId } = useParams();
+  const { babysitterServicesId } = useParams();
 
   const getBabysitterService = () => {
     const storedToken = localStorage.getItem("authToken");
     axios
       .get(
-        `${process.env.REACT_APP_SERVER_URL}/api/babysitterServices/${babysitterServiceId}`,
+        `${process.env.REACT_APP_SERVER_URL}/api/babysitterServices/${babysitterServicesId}`,
         { headers: { Authorization: `Bearer ${storedToken}` } }
       )
 
@@ -46,7 +46,7 @@ function BabysitterDetailsPage(props) {
 
       <AddBooking
         refreshBabysitterService={getBabysitterService}
-        babysitterServiceId={babysitterServiceId}
+        babysitterServiceId={babysitterServicesId}
       />
 
       {babysitterService &&
@@ -58,7 +58,7 @@ function BabysitterDetailsPage(props) {
         <button>Back to Babysitters</button>
       </Link>
 
-      <Link to={`/babysitterServices/edit/${babysitterServiceId}`}>
+      <Link to={`/babysitterServices/edit/${babysitterServicesId}`}>
         <button>Edit Babysitter</button>
       </Link>
     </div>

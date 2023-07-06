@@ -33,22 +33,15 @@ function BabysitterDirectoryPage() {
       {/* <AddBabysitter refreshBabysitterServices={getAllBabysitterServices} /> */}
       <h1>Babysitter Directory</h1>
       {babysitterServices.map((babysitterServices) => {
-<<<<<<< HEAD
         return (
           <div className="BabysitterCard card" key={babysitterServices._id}>
             <BabysitterCard
               key={babysitterServices._id}
               {...babysitterServices}
             />
-=======
-       
-        return (
-          <div className="BabysitterCard card" key={babysitterServices._id}>
-             <BabysitterCard key={babysitterServices._id} {...babysitterServices} />
             {/* <Link to={`/babysitterServices/${babysitterServices._id}`}>
               <h3>{babysitterServices.babysitterName}</h3>
             </Link> */}
->>>>>>> 28be24e077ac90f9951d855fe8fcaf8794de4c34
 
             {/* <Link to={`/babysitterServices/${babysitterServices._id}`}>
             

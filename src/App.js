@@ -18,14 +18,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-<<<<<<< HEAD
         <Route
           path="/babysitterServices/:babysitterServicesId"
           element={<BabysitterDetailsPage />}
         />
-=======
-        <Route path="/babysitterServices/:babysitterServicesId" element={ <BabysitterDetailsPage /> } />
->>>>>>> 28be24e077ac90f9951d855fe8fcaf8794de4c34
         <Route
           path="/babysitterServices"
           element={<BabysitterDirectoryPage />}

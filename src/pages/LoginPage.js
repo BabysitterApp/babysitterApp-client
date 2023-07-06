@@ -82,28 +82,19 @@ function LoginPage(props) {
           size="lg"
           type="submit"
           block
+          Link
+          to={"/login"}
         >
           Login
         </Button>
 
         {errorMessage && <p className="error-message">{errorMessage}</p>}
-
-<<<<<<< HEAD
         <p>Don't have an account yet?</p>
         <Button variant="secondary" text="muted" Link to={"/signup"}>
           {" "}
           Sign Up
         </Button>
       </Form>
-=======
-              <p>Don't have an account yet?</p>
-              <Button variant="secondary" text="muted" Link to={"/signup"}>
-                {" "}
-                Sign Up
-              </Button>
-            </Form>
-
->>>>>>> 28be24e077ac90f9951d855fe8fcaf8794de4c34
     </div>
   );
 }
