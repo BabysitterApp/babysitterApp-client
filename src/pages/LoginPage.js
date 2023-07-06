@@ -52,10 +52,12 @@ function LoginPage(props) {
           label="Email address"
           className="mb-3"
         >
-          <Form.Control type="email" placeholder="name@example.com" />
+          <Form.Control type="email" placeholder="name@example.com"  value={email} onChange={handleEmail}/>
         </FloatingLabel>
         <FloatingLabel controlId="floatingPassword" label="Password">
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Control type="password" placeholder="Password" value={password}
+          onChange={handlePassword}
+ />
         </FloatingLabel>
 
         {/* <label>Email:</label>
@@ -86,9 +88,7 @@ function LoginPage(props) {
                 Sign Up
               </Button>
             </Form>
-          </Col>
-        </Row>
-      </Container>
+
     </div>
   );
 }

@@ -38,7 +38,7 @@ textarea {
 
 nav {
   background: #4ea2c7;
-  color: white;
+  color: rgb(231, 140, 235);
   padding: 0px 20px;
   box-shadow: 0px 1px 2px rgb(130, 8, 8);
   width: 100%;
@@ -48,11 +48,14 @@ nav {
 
 nav li {
   list-style: none;
-  color: white;
+  color: rgb(118, 187, 200);
   font-size: 24px;
   font-weight: 600;
 }
-
+.HomePage
+{
+  background: rgb(239, 214, 90);
+}
 .SignupPage
 {
     background: rgb(247, 244, 244);
@@ -85,7 +88,7 @@ code {
 }
 
 footer {
-  background-color: black;
+  background-color: rgb(17, 16, 16);
   color: rgb(180, 180, 180);
   height: 200px;
   padding: 20px;

@@ -52,7 +52,7 @@ function EditBabysitterPage(props) {
         { headers: { Authorization: `Bearer ${storedToken}` } }   
       )
       .then((response) => {
-        navigate(`/babysitterServices/${babysitterServicesId}`)
+        navigate(`/babysitterServices/edit/${babysitterServicesId}`)
       });
   };
 
