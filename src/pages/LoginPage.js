@@ -80,7 +80,6 @@ function LoginPage(props) {
 
         {errorMessage && <p className="error-message">{errorMessage}</p>}
 
-<<<<<<< HEAD
               <p>Don't have an account yet?</p>
               <Button variant="secondary" text="muted" Link to={"/signup"}>
                 {" "}
@@ -88,14 +87,6 @@ function LoginPage(props) {
               </Button>
             </Form>
 
-=======
-        <p>Don't have an account yet?</p>
-        <Button variant="secondary" text="muted" Link to={"/signup"}>
-          {" "}
-          Sign Up
-        </Button>
-      </Form>
->>>>>>> ef2405caa2e69d6c660c7ba15afb874b28bc4da0
     </div>
   );
 }

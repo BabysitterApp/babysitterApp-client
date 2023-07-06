@@ -8,7 +8,6 @@ function BabysitterCard({
   yearsOfExperience,
   languages,
   pricePerHour,
-  description,
   _id,
 }) {
   // return  <h1>  BabysitterCard  </h1>
