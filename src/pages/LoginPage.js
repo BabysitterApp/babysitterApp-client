@@ -7,7 +7,6 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
 
 function LoginPage(props) {
   const [email, setEmail] = useState("");
@@ -86,8 +85,6 @@ function LoginPage(props) {
                 Sign Up
               </Button>
             </Form>
-          </Col>
-        </Row>
       </Container>
     </div>
   );
