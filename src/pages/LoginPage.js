@@ -6,8 +6,8 @@ import { AuthContext } from "../context/auth.context";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
+//import Container from "react-bootstrap/Container";
+//import Row from "react-bootstrap/Row";
 
 function LoginPage(props) {
   const [email, setEmail] = useState("");
@@ -52,21 +52,23 @@ function LoginPage(props) {
           label="Email address"
           className="mb-3"
         >
-          <Form.Control type="email" placeholder="name@example.com" />
+          <Form.Control type="email" placeholder="name@example.com"  value={email} onChange={handleEmail}/>
         </FloatingLabel>
         <FloatingLabel controlId="floatingPassword" label="Password">
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Control type="password" placeholder="Password"   
+          value={password}
+          onChange={handlePassword} />
         </FloatingLabel>
 
         {/* <label>Email:</label>
-        <input type="email" name="email" value={email} onChange={handleEmail} />
+        <input type="email" 
+        name="email" />
 
         <label>Password:</label>
         <input
           type="password"
           name="password"
-          value={password}
-          onChange={handlePassword}
+        
         /> */}
 
         <Button
