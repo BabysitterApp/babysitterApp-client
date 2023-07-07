@@ -12,12 +12,14 @@ import LoginPage from "./pages/LoginPage";
 import AddBooking from "./components/AddBooking";
 import AddBabysitter from "./components/AddBabysitter";
 
+
 //import babysitters from "./data.json";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
+      
       <Routes>
         <Route path="/" element={<HomePage />} />
         

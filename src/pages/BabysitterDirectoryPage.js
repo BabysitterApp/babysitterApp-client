@@ -4,10 +4,11 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, Link } from "react-router-dom";
 import BabysitterCard from "../components/BabysitterCard";
-
+import Cards from "../components/Cards";
 //const REACT_APP_SERVER_URL = "http://localhost:5005";
 
 function BabysitterDirectoryPage() {
+ 
   const [babysitterServices, setBabysitterServices] = useState([]);
   const { babysitterServicesId } = useParams();
 
@@ -34,6 +35,9 @@ function BabysitterDirectoryPage() {
     <div className="BabysitterDirectoryPage">
       {/* <AddBabysitter refreshBabysitterServices={getAllBabysitterServices} /> */}
       <h1>Babysitter Directory</h1>
+      <div className="BabysitterDirectory">
+  <Cards />
+</div>
       <Link to={`/babysitterServices/add/${babysitterServicesId}`}>
         <Button>Add Me as a Babysitter</Button>
       </Link>

@@ -1,15 +1,19 @@
 import React from "react";
 import { Container, Row, Image, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import teilzeit from "../Images/babysitter/babysitter-teilzeit-662x331.jpg";
+//import teilzeit from "../Images/babysitter/babysitter-teilzeit-662x331.jpg";
+import Slider from "../components/Slider";
 
 function HomePage() {
   return (
+    
     <Container>
-      <Row>
+       <Row>
         <h1>Welcome to LittleLuvSitters</h1>
-        <Image src={teilzeit} alt="playing blocks" width="80%" />
+        <Slider />
+        {/* <Image src={teilzeit} alt="playing blocks" width="80%" /> */}
       </Row>
+    
       <Row>
         <h3>Our Quality & Experience</h3>
         <p>
