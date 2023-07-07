@@ -9,7 +9,7 @@ import {Button, Card} from "react-bootstrap";
   ];
   const renderCard =(card, index) => {
     return(
-      <Card style={{ width: '18rem' }} key={index}>
+      <Card style={{ width: '18rem' }} key={index}className="box">
       <Card.Img variant="top" src={card.image} />
       <Card.Body>
         <Card.Title>{card.title}</Card.Title>
@@ -23,7 +23,7 @@ import {Button, Card} from "react-bootstrap";
   };
  
 
-    return <div className="card">
+    return <div className="grid">
   {cardInfo.map(renderCard)}    </div>;  
        
           

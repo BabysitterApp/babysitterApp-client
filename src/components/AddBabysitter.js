@@ -41,7 +41,7 @@ function AddBabysitter() {
       supportServices,
       yearsOfExperience,
       provideServiceFor,
-      pricePerHour,
+      pricePerHour
       // babysitterServiceId,
     };
 
