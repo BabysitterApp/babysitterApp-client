@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+LittleLuvSitters
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+App Description
 
-## Available Scripts
+LittleLuvSitters is a local residential service application designed to provide convenient and efficient access to various babysitter services within a residential complex. If you need babysitters, our app connects you with a list of profiles within your neighborhood. Say goodbye to the hassle of searching for babysitters outside your area and enjoy the convenience of local childcare tailored to your community's needs. Here is the deployed app:
 
-In the project directory, you can run:
+littleluvsitters.netlify.app
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+User Stories
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. User may wish to engage babysitter services and can view the list of available babysitters.
 
-### `npm test`
+2. User can add, update, delete babysitting services profile. The app is extendable for other “light” services such as elderly care and pet services.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. User may book babysitters.
+   
 
-### `npm run build`
+Front-end App Repository
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This repository was generated with “create react app”. To run the app, you must install the following dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- npm install react-bootstrap 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- npm install react-select 
 
-### `npm run eject`
+- npm install react-router-dom 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- npm install axios 
+To start the front-end: npm start.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Back-end App Repository
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This back-end (“models-routes-forms") was created with the “npm ronlauncher” generator based on the Express.js, MongoDB (MERN stack). To start the backend: npm run dev. A repository with the backend code can be found here.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+	littleluvsitters-api.adaptable.app 
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
