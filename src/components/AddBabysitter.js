@@ -161,9 +161,11 @@ function AddBabysitter() {
             onChange={handleSupportServicesChange}
           />
           <br />
+          <Link to="/babysitterServices" activeClassName="active">
           <Button type="submit" size="lg" variant="primary">
             Submit
           </Button>
+          </Link>
           <Link to="/babysitterServices" activeClassName="active">
             <Button size="lg" variant="secondary">
               Cancel

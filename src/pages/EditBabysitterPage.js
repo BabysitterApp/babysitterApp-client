@@ -1,5 +1,5 @@
 
-import {  useParams, useNavigate } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Container, Button, Form } from "react-bootstrap";
@@ -8,7 +8,7 @@ import Select from "react-select";
 
 //const REACT_APP_SERVER_URL = "http://localhost:5005";
 
-function EditBabysitterPage(props) {
+function EditBabysitterPage() {
   const [babysitterName, setBabysitterName] = useState("");
   const [aboutMe, setAboutMe] = useState("");
   const [languages, setLanguages] = useState("");
@@ -78,7 +78,7 @@ function EditBabysitterPage(props) {
 
     //axios.put(url, data, config)
     axios.put(
-        `${process.env.REACT_APP_SERVER_URL}/api/babysitterServices/${babysitterServicesId}`,
+        `${process.env.REACT_APP_SERVER_URL}/api/babysitterServices/edit/${babysitterServicesId}`,
         requestBody,
         { headers: { Authorization: `Bearer ${storedToken}` } }   
       )
@@ -180,10 +180,13 @@ function EditBabysitterPage(props) {
             onChange={handleSupportServicesChange}
           />
           <br />
+          <Link to="/babysitterServices" activeClassName="active">
 <Button type="submit" size="lg" variant="primary">
   Update Babysitter</Button>
-      
-      <Button onClick={deleteBabysitterServices}>Delete Babysitter</Button>
+      </Link>
+      <Link to="/babysitterServices" activeClassName="active">
+      <Button type="delete" size="lg" variant="primary"onClick={deleteBabysitterServices}>Delete Babysitter</Button>
+      </Link>
       </Form>
       </Container>  
           </div>

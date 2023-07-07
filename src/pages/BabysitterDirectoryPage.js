@@ -8,7 +8,6 @@ import Cards from "../components/Cards";
 //const REACT_APP_SERVER_URL = "http://localhost:5005";
 
 function BabysitterDirectoryPage() {
- 
   const [babysitterServices, setBabysitterServices] = useState([]);
   const { babysitterServicesId } = useParams();
 
@@ -31,16 +30,21 @@ function BabysitterDirectoryPage() {
     getAllBabysitterServices();
   }, []);
   console.log(babysitterServices);
+
   return (
     <div className="BabysitterDirectoryPage">
       {/* <AddBabysitter refreshBabysitterServices={getAllBabysitterServices} /> */}
       <h1>Babysitter Directory</h1>
       <div className="BabysitterDirectory">
-  <Cards />
-</div>
+        
+      
+        <Cards />
+      
+      </div>
       <Link to={`/babysitterServices/add/${babysitterServicesId}`}>
         <Button>Add Me as a Babysitter</Button>
       </Link>
+
       {babysitterServices.map((babysitterServices) => {
         return (
           <div className="BabysitterCard card" key={babysitterServices._id}>

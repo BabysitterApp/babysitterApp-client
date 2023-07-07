@@ -7,7 +7,7 @@ return(
       <Carousel.Item>
         <Image 
          className="d-block w-100"
-         src="https://previews.123rf.com/images/asyaart/asyaart1805/asyaart180500080/102770635-signboard-or-logo-for-babysitter-with-kids-toys-handprints-baby-pacifier-and-pencils.jpg"
+         src="https://newmom.at/files/taco/img/working-mom/Babysitter_panthermedia_AntonioGuillem_26549715_800x400_NM_3-22.jpg"
           alt="First slide"
           width="60%"
         />
@@ -19,7 +19,8 @@ return(
       <Carousel.Item>
         <Image 
          className="d-block w-100"
-         src="https://newmom.at/files/taco/img/working-mom/Babysitter_panthermedia_AntonioGuillem_26549715_800x400_NM_3-22.jpg"
+         src="https://previews.123rf.com/images/asyaart/asyaart1805/asyaart180500080/102770635-signboard-or-logo-for-babysitter-with-kids-toys-handprints-baby-pacifier-and-pencils.jpg"
+         
           alt="First slide"
           width="60%"
         />
