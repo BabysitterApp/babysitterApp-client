@@ -34,5 +34,5 @@ Back-end App Repository
 
 The back-end (“models-routes-forms") was created with the “npm ronlauncher” generator based on Express.js, and MongoDB (MERN stack). To start the backend: npm run dev. A repository with the backend code can be found here:
 
-	[(littleluvsitters-api.adaptable.app)] 
+	[littleluvsitters-api.adaptable.app ](url)
 
