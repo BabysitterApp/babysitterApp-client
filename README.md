@@ -4,7 +4,7 @@ App Description
 
 LittleLuvSitters is a local residential service application designed to provide convenient and efficient access to various babysitter services within a residential complex. If you need babysitters, our app connects you with a list of profiles within your neighborhood. Say goodbye to the hassle of searching for babysitters outside your area and enjoy the convenience of local childcare tailored to your community's needs. Here is the deployed app:
 
-littleluvsitters.netlify.app
+[(littleluvsitters.netlify.app)]
 
 
 User Stories
@@ -27,11 +27,12 @@ This repository was generated with “create react app”. To run the app, you m
 - npm install react-router-dom 
 
 - npm install axios 
+
 To start the front-end: npm start.
 
 Back-end App Repository
 
-This back-end (“models-routes-forms") was created with the “npm ronlauncher” generator based on the Express.js, MongoDB (MERN stack). To start the backend: npm run dev. A repository with the backend code can be found here.
+The back-end (“models-routes-forms") was created with the “npm ronlauncher” generator based on Express.js, and MongoDB (MERN stack). To start the backend: npm run dev. A repository with the backend code can be found here:
 
-	littleluvsitters-api.adaptable.app 
+	[(littleluvsitters-api.adaptable.app)] 
 
