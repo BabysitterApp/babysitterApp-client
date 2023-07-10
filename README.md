@@ -4,7 +4,7 @@ App Description
 
 LittleLuvSitters is a local residential service application designed to provide convenient and efficient access to various babysitter services within a residential complex. If you need babysitters, our app connects you with a list of profiles within your neighborhood. Say goodbye to the hassle of searching for babysitters outside your area and enjoy the convenience of local childcare tailored to your community's needs. Here is the deployed app:
 
-[(littleluvsitters.netlify.app)]
+[littleluvsitters.netlify.app](url)
 
 
 User Stories
